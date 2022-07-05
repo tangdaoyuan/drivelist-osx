@@ -4,7 +4,7 @@ import { list } from '.'
 
 // eslint-disable-next-line no-unused-expressions
 yargs
-  .scriptName('drivelist-linux')
+  .scriptName('drivelist-osx')
   .usage('$0')
   .command(
     '$0',

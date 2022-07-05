@@ -7,7 +7,7 @@ const drivelistBindings = bindings('drivelist-osx')
 function bindingsList(): Promise<Drive[]> {
   return new Promise((resolve, reject) => {
     drivelistBindings.list((error: Error, drives: Drive[]) => {
-      if (!error)
+      if (error)
         reject(error)
 
       else
