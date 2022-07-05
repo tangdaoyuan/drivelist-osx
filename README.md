@@ -1,3 +1,3 @@
-# typescript-starter
+# drivelist-osx
 > 
-> My starter project for typescript.
+> Get driver list in OSX.
