@@ -1,10 +1,10 @@
 {
-  "name": "@suger-tdy/drivelits-osx",
+  "name": "@suger-tdy/drivelist-osx",
   "version": "0.0.3",
   "packageManager": "pnpm@7.5.0",
   "description": "Get driver list in osx",
   "keywords": [
-    "drivelits-osx"
+    "drivelist-osx"
   ],
   "license": "Apache-2.0",
   "author": "tangdaoyuan <1197633750@qq.com> (https://github.com/tangdaoyuan/)",
