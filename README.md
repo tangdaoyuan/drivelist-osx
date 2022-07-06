@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-npm install drivelist-osx -g
+npm install @suger-tdy/drivelist-osx -g
 ```
 
 ## Usage
