@@ -2,11 +2,18 @@ import { platform } from 'os'
 import bindings from 'bindings'
 import type { Drive } from './types'
 
-const drivelistBindings = bindings('drivelist-osx')
+let drivelistBindings: ReturnType<typeof bindings>
+
+function _getBindings() {
+  if (!drivelistBindings)
+    drivelistBindings = bindings('drivelist-osx')
+
+  return drivelistBindings
+}
 
 function bindingsList(): Promise<Drive[]> {
   return new Promise((resolve, reject) => {
-    drivelistBindings.list((error: Error, drives: Drive[]) => {
+    _getBindings().list((error: Error, drives: Drive[]) => {
       if (error)
         reject(error)
 
