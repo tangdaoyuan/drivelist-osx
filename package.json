@@ -25,7 +25,9 @@
   },
   "files": [
     "dist",
-    "*.d.ts"
+    "*.d.ts",
+    "binding.gyp",
+    "lib"
   ],
   "scripts": {
     "install": "prebuild-install -r napi || node-gyp rebuild",
