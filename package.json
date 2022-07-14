@@ -33,6 +33,9 @@
   "bin": {
     "drivelist-osx": "./bin/cli.js"
   },
+  "os": [
+    "darwin"
+  ],
   "scripts": {
     "install": "prebuild-install -r napi || node-gyp rebuild",
     "test": "vitest",
