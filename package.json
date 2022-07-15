@@ -28,16 +28,15 @@
     "dist",
     "*.d.ts",
     "binding.gyp",
-    "lib"
+    "lib",
+    "scripts"
   ],
   "bin": {
     "drivelist-osx": "./bin/cli.js"
   },
-  "os": [
-    "darwin"
-  ],
   "scripts": {
-    "install": "prebuild-install -r napi || node-gyp rebuild",
+    "install": "node ./scripts/run.js",
+    "preRebuild": "prebuild-install -r napi || node-gyp rebuild",
     "test": "vitest",
     "test:run": "vitest run",
     "typecheck": "tsc --noEmit",
