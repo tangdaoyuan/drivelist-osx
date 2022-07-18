@@ -7,6 +7,7 @@ function pacakgerManager() {
   let packageManager = 'npm'
   try {
     execSync('which pnpm')
+    execSync('pnpm -v')
     packageManager = 'pnpm'
   }
   catch (e) {
