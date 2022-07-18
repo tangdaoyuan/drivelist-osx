@@ -3,22 +3,26 @@
 const { execSync } = require('child_process')
 const os = require('os')
 
+function where() {
+  let where = 'where'
+  try {
+    execSync(where)
+  }
+  catch (error) {
+    where = 'which'
+  }
+  return where
+}
+
 function pacakgerManager() {
   let packageManager = 'npm'
   try {
-    execSync('which pnpm')
+    execSync(`${where()} pnpm`)
     execSync('pnpm -v')
     packageManager = 'pnpm'
   }
   catch (e) {
-    try {
-      console.info('Installing Pnpm...')
-      execSync('npm install -g pnpm')
-      packageManager = 'pnpm'
-    }
-    catch (error) {
-      console.info('Pnpm installed failed.')
-    }
+    console.error(e)
   }
   return packageManager
 }
