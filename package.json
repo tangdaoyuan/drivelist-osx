@@ -51,7 +51,7 @@
     "configure": "node-gyp configure",
     "build:lib": "node-gyp rebuild",
     "prebuild": "prebuild -r napi --verbose",
-    "upload": "prebuild -r napi --upload ${GITHUB_TOKEN}"
+    "upload": "prebuild -r napi"
   },
   "binary": {
     "napi_versions": [
