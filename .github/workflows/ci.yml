@@ -100,11 +100,11 @@ jobs:
         run: pnpm install
 
       - name: Configure
-        run: pnpm configure --openssl_fips=''
+        run: pnpm configure
 
       - name: Prebuild
         run: |
-          pnpm prebuild-electron --upload "$PREBUILD_TOKEN" --openssl_fips=''
+          pnpm prebuild-electron --upload "$PREBUILD_TOKEN"
         env:
           PREBUILD_TOKEN: ${{ secrets.PREBUILD_TOKEN }}
 
