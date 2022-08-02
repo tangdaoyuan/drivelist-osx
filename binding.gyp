@@ -1,6 +1,6 @@
 {
     "variables": {
-        "openssl_fips" : "0" 
+        "openssl_fips": "0"
     },
     "targets": [
         {
@@ -42,7 +42,6 @@
                         'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
                         "defines": [
                             "NAPI_VERSION=3",
-                            "openssl_fips=''"
                         ],
                     }
                 ],
