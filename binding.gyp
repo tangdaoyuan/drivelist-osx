@@ -1,4 +1,7 @@
 {
+    "variables": {
+        "openssl_fips": ""
+    },
     "targets": [
         {
             "target_name": "drivelist-osx",
@@ -38,7 +41,7 @@
                         ],
                         'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
                         "defines": [
-                            "NAPI_VERSION=<(napi_build_version)"
+                            "NAPI_VERSION=3",
                         ],
                     }
                 ],
