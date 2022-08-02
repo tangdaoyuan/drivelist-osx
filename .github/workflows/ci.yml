@@ -104,11 +104,13 @@ jobs:
 
       - name: Prebuild
         run: |
+          pnpm config set dist-url "$DIST_URL"
           pnpm config get dist-url
           pnpm prebuild-electron --upload "$PREBUILD_TOKEN"
         env:
           PREBUILD_TOKEN: ${{ secrets.PREBUILD_TOKEN }}
           dist-url: "https://electronjs.org/headers"
+          DIST_URL: "https://electronjs.org/headers"
 
   prebuild-electron-other:
     runs-on: ${{ matrix.os }}
