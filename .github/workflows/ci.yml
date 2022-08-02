@@ -104,7 +104,6 @@ jobs:
 
       - name: Prebuild
         run: |
-          pnpm config set dist-url "$dist-url"
           pnpm config get dist-url
           pnpm prebuild-electron --upload "$PREBUILD_TOKEN"
         env:
