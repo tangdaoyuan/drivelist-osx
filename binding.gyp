@@ -1,6 +1,6 @@
 {
     "variables": {
-        "openssl_fips": "0"
+        "openssl_fips": ""
     },
     "targets": [
         {
