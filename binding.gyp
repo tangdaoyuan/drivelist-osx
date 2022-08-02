@@ -41,7 +41,8 @@
                         ],
                         'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
                         "defines": [
-                            "NAPI_VERSION=3"
+                            "NAPI_VERSION=3",
+                            "openssl_fips=''"
                         ],
                     }
                 ],
