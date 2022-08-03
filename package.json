@@ -1,6 +1,6 @@
 {
   "name": "@suger-tdy/drivelist-osx",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "packageManager": "pnpm@7.5.0",
   "description": "Get driver list in osx",
   "keywords": [
