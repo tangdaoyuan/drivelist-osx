@@ -144,4 +144,4 @@ jobs:
           path: prebuilds
 
       - name: Upload Prebuilt Artifacts to GitHub Release
-        run: pnpm run prebuild-upload -- ${{ secrets.PREBUILD_TOKEN }
+        run: pnpm run prebuild-upload -- ${{ secrets.PREBUILD_TOKEN }}
