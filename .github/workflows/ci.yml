@@ -123,7 +123,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     if: ${{ startsWith(github.ref, 'refs/tags/v') }}
-    needs: [lint, typecheck, test, prebuild]
+    needs: [prebuild]
 
     steps:
       - uses: actions/checkout@v3
@@ -146,4 +146,4 @@ jobs:
           path: prebuilds
 
       - name: Upload Prebuilt Artifacts to GitHub Release
-        run: pnpm run prebuild-upload -- ${{ secrets.PREBUILD_TOKEN }}
+        run: pnpm run prebuild-upload ${{ secrets.PREBUILD_TOKEN }}
